@@ -2,7 +2,6 @@ var path = require('path')
 
 exports.build = function build() {
   var PROJ_ROOT = path.resolve(__dirname.replace('node_modules', ''), '../..');
-  console.log("PROJ_ROOT", PROJ_ROOT)
 
   var packageInfo = require(path.resolve(PROJ_ROOT, 'package.json'))
   var dependencies = Object.keys(packageInfo.dependencies).map(function (dependence) {
